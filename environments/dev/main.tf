@@ -3,12 +3,19 @@ provider "aws" {
 }
 
 terraform {
-  backend "s3" {
-    bucket         = "my-hashicups-dev-tfstate"
-    key            = "terraform.tfstate"
-    region         = "eu-north-1"
-    dynamodb_table = "my-hashicups-dev-locks"
-    encrypt        = true
+  # backend "s3" {
+  #   bucket         = "my-hashicups-dev-tfstate"
+  #   key            = "terraform.tfstate"
+  #   region         = "eu-north-1"
+  #   dynamodb_table = "my-hashicups-dev-locks"
+  #   encrypt        = true
+  # }
+
+  cloud {
+    organization = "anubhav-learning"
+    workspaces {
+      name = "hashicups-docker-compose-terraform-dev"
+    }
   }
 }
 
