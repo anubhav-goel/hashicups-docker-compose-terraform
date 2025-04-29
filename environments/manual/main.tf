@@ -4,10 +4,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "my-hashicups-stage-tfstate"
+    bucket         = "my-hashicups-manual-tfstate"
     key            = "terraform.tfstate"
     region         = "eu-north-1"
-    dynamodb_table = "my-hashicups-stage-locks"
+    dynamodb_table = "my-hashicups-manual-locks"
     encrypt        = true
   }
 }
