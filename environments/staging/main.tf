@@ -25,3 +25,6 @@ module "hashicups" {
   vpc_id        = data.aws_vpc.default.id
 }
 
+# resource "aws_s3_bucket" "new_bucket_test" {
+#   bucket = "test-anubhav-29-04-2025-${var.environment}"
+# }
