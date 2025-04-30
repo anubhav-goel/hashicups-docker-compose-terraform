@@ -42,6 +42,6 @@ resource "aws_instance" "hashicups" {
               EOF
 }
 
-# resource "aws_s3_bucket" "new_bucket_test" {
-#   bucket = "test-anubhav-29-04-2025-${var.environment}"
-# }
+resource "aws_s3_bucket" "new_bucket_test" {
+  bucket = "test-anubhav-30-04-2025-${var.environment}"
+}
