@@ -41,3 +41,7 @@ resource "aws_instance" "hashicups" {
               docker-compose up -d
               EOF
 }
+
+# resource "aws_s3_bucket" "new_bucket_test" {
+#   bucket = "test-anubhav-29-04-2025-${var.environment}"
+# }
